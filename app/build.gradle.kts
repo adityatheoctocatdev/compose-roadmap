@@ -1,5 +1,3 @@
-import com.adityatheoctocatdev.composeroadmap.buildsrc.*
-
 plugins {
     id("com.android.application")
     id("kotlin-android")
@@ -26,7 +24,6 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = true
-            isShrinkResources = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -51,26 +48,26 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = Versions.AndroidX.Compose.composeVersion
+        kotlinCompilerExtensionVersion = "1.0.0-beta05"
     }
 }
 
 dependencies {
-    implementation(Libs.Kotlin.stdlib)
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.4.32")
 
-    implementation(Libs.Google.materialComponents)
+    implementation("com.google.android.material:material:1.3.0")
 
-    implementation(Libs.AndroidX.Core.coreKtx)
-    implementation(Libs.AndroidX.AppCompat.appcompat)
-    implementation(Libs.AndroidX.Compose.UI.ui)
-    implementation(Libs.AndroidX.Compose.Material.material)
-    implementation(Libs.AndroidX.Compose.UI.uiTooling)
-    implementation(Libs.AndroidX.Lifecycle.lifecycleRuntimeKtx)
-    implementation(Libs.AndroidX.Activity.activityCompose)
+    implementation("androidx.core:core-ktx:1.3.2")
+    implementation("androidx.appcompat:appcompat:1.2.0")
+    implementation("androidx.compose.ui:ui:1.0.0-beta05")
+    implementation("androidx.compose.material:material:1.0.0-beta05")
+    implementation("androidx.compose.ui:ui-tooling:1.0.0-beta05")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.3.1")
+    implementation("androidx.activity:activity-compose:1.3.0-alpha07")
 
-    testImplementation(Libs.JUnit.jUnit)
+    testImplementation("junit:junit:4.13.2")
 
-    androidTestImplementation(Libs.AndroidX.Test.Ext.jUnit)
-    androidTestImplementation(Libs.AndroidX.Test.Espresso.espressoCore)
-    androidTestImplementation(Libs.AndroidX.Compose.UI.uiTestingJUnit4)
+    androidTestImplementation("androidx.test.ext:junit:1.1.2")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.3.0")
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.0.0-beta05")
 }
