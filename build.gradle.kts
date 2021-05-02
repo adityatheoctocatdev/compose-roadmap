@@ -5,8 +5,8 @@ buildscript {
     }
 
     dependencies {
-        classpath(com.adityatheoctocatdev.composeroadmap.buildsrc.Libs.Android.androidGradlePlugin)
-        classpath(com.adityatheoctocatdev.composeroadmap.buildsrc.Libs.Kotlin.kotlinGradlePlugin)
+        classpath("com.android.tools.build:gradle:7.0.0-alpha15")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.32")
     }
 }
 
