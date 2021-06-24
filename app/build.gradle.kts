@@ -53,7 +53,7 @@ android {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.5.10")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.5.20")
 
     implementation("com.google.android.material:material:1.3.0")
 
