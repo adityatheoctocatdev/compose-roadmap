@@ -59,7 +59,7 @@ dependencies {
 
     implementation("androidx.core:core-ktx:1.3.2")
     implementation("androidx.appcompat:appcompat:1.2.0")
-    implementation("androidx.compose.ui:ui:1.0.0-beta07")
+    implementation("androidx.compose.ui:ui:1.0.5")
     implementation("androidx.compose.material:material:1.0.0-beta07")
     implementation("androidx.compose.ui:ui-tooling:1.0.0-beta07")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.3.1")
